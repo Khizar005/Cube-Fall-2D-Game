@@ -9,6 +9,7 @@ public class PlatformSpawner : MonoBehaviour
     public GameObject spikePlatformPrefab;
     public GameObject[] movingPlatforms;
     public GameObject breakablePlatformPrefab;
+    public GameObject BossPlatformPrefab;
 
     public float platformSpawnTimer = 1f;
     private float currentPlatformSpawnTimer;
@@ -77,6 +78,19 @@ public class PlatformSpawner : MonoBehaviour
                 }
             }
             else if (platformSpawnCount == 4)
+            {
+                int random = Random.Range(0, 2);
+
+                if (random == 0)
+                {
+                    newPlatform = Instantiate(platformPrefab, temp, Quaternion.identity);
+                }
+                else if (random == 1)
+                {
+                    newPlatform = Instantiate(BossPlatformPrefab, temp, Quaternion.identity);
+                }
+            }
+            else if (platformSpawnCount == 6)
             {
                 int random = Random.Range(0, 2);
 

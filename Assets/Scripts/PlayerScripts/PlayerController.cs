@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f; 
     private int scoreNumber = 1;
     private bool moveLeft, moveRight;
-
 
     private Rigidbody2D rb;
     public TextMeshProUGUI scoreText;
@@ -89,7 +89,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.CompareTag("Spike") || target.transform.CompareTag("EnemySpike"))
+        if (target.CompareTag("Spike") 
+            || target.transform.CompareTag("EnemySpike")
+            || target.transform.CompareTag("BossOne"))
         {
             AudioSource.PlayClipAtPoint(AudiForDeath, Camera.main.transform.position);
             StartCoroutine(WaitForReload());
