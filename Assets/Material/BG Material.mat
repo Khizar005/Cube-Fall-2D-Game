@@ -9,8 +9,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: BG Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -19,7 +17,6 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -46,7 +43,7 @@ Material:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: ec33e96b7718f8641a976032123ac344, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 572.35095}
+        m_Offset: {x: 0, y: 605.60406}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
